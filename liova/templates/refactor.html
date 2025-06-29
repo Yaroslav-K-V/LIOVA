@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Email Refactoring</h2>
+<form method="post">
+    <textarea name="email" rows="8" cols="60">{{ original }}</textarea>
+    <button type="submit">Refactor</button>
+</form>
+{% if refactored %}
+<h3>Refactored Email</h3>
+<pre>{{ refactored }}</pre>
+<h3>Diff</h3>
+<pre>{{ diff }}</pre>
+{% endif %}
+{% endblock %}
